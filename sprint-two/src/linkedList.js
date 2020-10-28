@@ -50,14 +50,3 @@ var Node = function(value) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-//  12, 6, 71, 26, [34, 82]
-
-//  {12: {6: {71: {26: {34: {82 : null}}}}}}
-//  {head : {value: 12}value: 12, next: null}
-
-
-
-//{head: null, tail: null}
-
-//{head: {value: 12, next: {value: 6, next: null}}, tail: {value: 6, next: null}}
