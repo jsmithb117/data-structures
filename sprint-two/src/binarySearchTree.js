@@ -1,4 +1,4 @@
-var BinarySearchTree = function(input) {
+var BinarySearchTree = function(input) { //Constant
   var node = {};
   node.value = input;
   node.left = null;
@@ -8,7 +8,7 @@ var BinarySearchTree = function(input) {
 };
 
 var bstMeth = {};
-bstMeth.insert = function(input) {
+bstMeth.insert = function(input) { //Logarithmic
   var newTree = BinarySearchTree(input);
   if (this.value > input) {
     if (!this.left) {
@@ -25,7 +25,7 @@ bstMeth.insert = function(input) {
   }
 };
 
-bstMeth.contains = function(target) {
+bstMeth.contains = function(target) { //Logarithmic
   if (this.value === target) {
     return true;
   } else if (target < this.value) {
@@ -33,7 +33,7 @@ bstMeth.contains = function(target) {
       return false;
     } else {
       return this.left.contains(target);
-    };
+    }
   } else if (target > this.value) {
     if (this.right === null) {
       return false;
@@ -43,8 +43,8 @@ bstMeth.contains = function(target) {
   }
 };
 
-bstMeth.depthFirstLog = function(cb) {//{5, left: {value: 2, left: null, right: null}, right: 7}
-cb(this.value);
+bstMeth.depthFirstLog = function(cb) { //Linear
+  cb(this.value);
   if (this.left !== null) {
     this.left.depthFirstLog(cb);
   }
@@ -57,6 +57,3 @@ cb(this.value);
 /*
  * Complexity: What is the time complexity of the above functions?
  */
- //{value: 5, left: null, right: null}
- //{value: 2, left: null, right: null}
- //{value: 5, left: {value: 2, left: null, right: null}, right: null}

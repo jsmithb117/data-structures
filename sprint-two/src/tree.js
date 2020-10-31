@@ -1,4 +1,4 @@
-var Tree = function(value) {
+var Tree = function(value) { //Constant
   var newTree = {};
   newTree.value = value;
   newTree.children = [];
@@ -8,25 +8,14 @@ var Tree = function(value) {
 
 var treeMethods = {};
 
-treeMethods.addChild = function(value) {
+treeMethods.addChild = function(value) { //Constant
   this.children.push(Tree(value));
 };
 
-treeMethods.contains = function(target) {
+treeMethods.contains = function(target) { //Linear
   return (this.value === target || this.children.some(e => e.contains(target)));
 };
-
-
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
-
-//{value: 6, children: [{value: 5, children: [{value: 4, children: []}, {value: 3, children: []}]}, {value: 10, children: [{value: 9, children: []}, {value: 8, children: []}]}]}
-
-//        6
-//      /   \
-//    [5       10]
-//   / \      / \
-//  4   3    [9    8]
