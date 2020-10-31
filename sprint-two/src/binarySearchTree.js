@@ -52,8 +52,3 @@ bstMeth.depthFirstLog = function(cb) { //Linear
     this.right.depthFirstLog(cb);
   }
 };
-
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */

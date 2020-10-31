@@ -16,6 +16,3 @@ treeMethods.contains = function(target) { //Linear
   return (this.value === target || this.children.some(e => e.contains(target)));
 };
 
-/*
- * Complexity: What is the time complexity of the above functions?
- */

@@ -38,7 +38,3 @@ var Node = function(value) { //Constant
   node.next = null;
   return node;
 };
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */
