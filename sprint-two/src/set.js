@@ -6,11 +6,11 @@ var Set = function() { //Constant
 
 var setPrototype = {};
 
-setPrototype.add = function(item) { //Constant
+setPrototype.add = function(item) { // Constant
   this._storage[item] = item;
 };
 
-setPrototype.contains = function(item) { //Linear
+setPrototype.contains = function(item) { // Linear
   for (var key in this._storage) {
     if (key === item) {
       return true;
@@ -19,7 +19,7 @@ setPrototype.contains = function(item) { //Linear
   return false;
 };
 
-setPrototype.remove = function(item) { //Linear
+setPrototype.remove = function(item) { // Linear
   for (var key in this._storage) {
     if (key === item) {
       delete this._storage[item];
